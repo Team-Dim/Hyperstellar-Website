@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* Optional: Simplified Chinese fallback for Chinese text */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
+
+/* Basic styling for button-like links */
+
+* {
+	margin: 0;
+	font-family: 'Ubuntu Mono';
+}
+
+.first-container {
+	display: grid;
+	place-items: center;
+	/* position: absolute; */
+	text-align: center;
+	height: 100vh;
+	width: 100vw;
+	background-image: linear-gradient(red, yellow);
+}
+
+h1 {
+	font-size: 3rem;
+	padding-bottom: 1rem;
+	/* 3rem = 3 x root em = 3 x 16px = 48px */
+	/* root em is the font size of the root element (html) */
+}
+
+.btnContainer {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 1rem;
+}
+
+#intro-text {}
+
+.second-container {
+	display: grid;
+	place-items: center;
+	text-align: center;
+	height: 100vh;
+	width: 100vw;
+}
+
+.btn {
+	display: inline-block;
+	padding: 12px 24px;
+	border: none;
+	border-radius: 8px;
+	color: aliceblue;
+	font: inherit;
+	cursor: pointer;
+	text-decoration: none;
+        
+}
+
+#discord-btn {
+	/*# is for id, . is for class*/
+	background-color: #1327fa;
+}
+
+#chinese-btn {
+	background-color: #fa1313;
+}
