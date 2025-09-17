@@ -9,10 +9,6 @@
 	font-family: 'Ubuntu Mono';
 }
 
-body {
-	max-width: 100%;
-}
-
 /* Base Components */
 
 .page {
@@ -30,13 +26,14 @@ body {
 
 #intro {
 	display: grid;
+	place-items: center;
 	grid-template-rows: 2fr 1fr 1fr;
 	width: 80%;
 	height: 75%;
 }
 
-#intro-text h1 {
-	font-size: 3rem;
+#intro h1 {
+	font-size: 11vw;
 }
 
 #discord-btn {
