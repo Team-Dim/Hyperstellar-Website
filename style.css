@@ -30,10 +30,37 @@
 	grid-template-rows: 2fr 1fr 1fr;
 	width: 80%;
 	height: 75%;
+	container-type: size;
 }
 
 #intro h1 {
-	font-size: 11vw;
+	font-size: 15cqi;
+}
+
+#intro p {
+	font-size: 4cqw;
+}
+
+#intro-btns {
+	display: flex;
+	flex-direction: row;
+	width: 95%;
+	height: 95%;
+}
+
+@media (max-aspect-ratio: 1/1) {
+	#intro-btns {
+		flex-direction: column;
+	}
+}
+
+#intro-btns .btn {
+	width: 100%;
+	padding: 3%;
+	border-radius: 1%;
+	color: aliceblue;
+	font-size: 5vw;
+	text-align: center;
 }
 
 #discord-btn {
@@ -51,16 +78,4 @@
 	display: grid;
 	place-items: center;
 	text-align: center;
-}
-
-.btn {
-	display: inline-block;
-	padding: 12px 24px;
-	border: none;
-	border-radius: 8px;
-	color: aliceblue;
-	font: inherit;
-	cursor: pointer;
-	text-decoration: none;
-        
 }
