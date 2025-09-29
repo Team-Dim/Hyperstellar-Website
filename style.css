@@ -44,7 +44,39 @@
 }
 
 #intro p {
-	font-size: 6cqw;
+	font-size: 3.5cqw;
+	border: 1px solid white;
+	text-align: center;
+	box-sizing: border-box; /* Ensure padding is included in width */
+	flex: 0 0 calc((100% - 20px) / 3); /* For medium: 3 per row, accounting for 2 gaps */
+}
+
+#intro #description {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+}
+
+/* Very narrow viewport (aspect ratio <= 1:1, e.g., smartphone in portrait) */
+@media (max-aspect-ratio: 1/1) {
+	#intro #description {
+		flex-direction: column;
+		align-items: center;
+	}
+	#intro #description p {
+		flex: 0 0 auto;
+		width: 100%;
+		font-size: 5cqw;
+	}
+}
+
+/* Very wide viewport (aspect ratio >= 16:9, e.g., widescreen monitor) */
+@media (min-aspect-ratio: 21/9) {
+	#intro #description p {
+		flex: auto;
+		font-size: 5cqh;
+	}
 }
 
 #intro-btns {
