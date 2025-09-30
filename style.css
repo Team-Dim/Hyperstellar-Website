@@ -45,7 +45,6 @@
 
 #intro p {
 	font-size: 3.5cqw;
-	border: 1px solid white;
 	text-align: center;
 	box-sizing: border-box; /* Ensure padding is included in width */
 	flex: 0 0 calc((100% - 20px) / 3); /* For medium: 3 per row, accounting for 2 gaps */
@@ -58,24 +57,28 @@
 	gap: 10px;
 }
 
-/* Very narrow viewport (aspect ratio <= 1:1, e.g., smartphone in portrait) */
-@media (max-aspect-ratio: 1/1) {
+/* Very narrow viewport (aspect ratio <= 0.8, e.g., smartphone in portrait) */
+@media (max-aspect-ratio: 8/10) {
 	#intro #description {
 		flex-direction: column;
 		align-items: center;
 	}
-	#intro #description p {
+	#intro p {
 		flex: 0 0 auto;
 		width: 100%;
-		font-size: 5cqw;
+		font-size: 10cqmin;
 	}
 }
 
 /* Very wide viewport (aspect ratio >= 16:9, e.g., widescreen monitor) */
 @media (min-aspect-ratio: 21/9) {
-	#intro #description p {
+	#intro p {
 		flex: auto;
-		font-size: 5cqh;
+		font-size: 7cqh;
+	}
+
+	#intro #description {
+		gap: 20px;
 	}
 }
 
@@ -105,6 +108,14 @@
 	padding: 3%;
 	border-radius: 1%;
 	color: aliceblue;
+}
+
+@media (min-aspect-ratio: 21/9) {
+	#intro-btns .btn {
+		width: 25%;
+		height: 10%;
+		font-size: 1.5cqw;
+	}
 }
 
 #discord-btn {
