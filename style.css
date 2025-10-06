@@ -15,6 +15,18 @@
 	height: 100vh;
 }
 
+/* Entities */
+
+.entity-category {
+	font-size: max(5vw, 7vh);
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.entity {
+	background-color: rgb(66, 66, 66);
+	font-size: max(3vw, 4vh);
+}
+
 /* Page 1 */
 
 #page1 {
@@ -131,6 +143,7 @@
 
 #page2 {
 	display: grid;
+	grid-template-rows: 1fr 3fr 3fr;
 	place-items: center;
-	text-align: center;
+	background-image: linear-gradient(rgb(51, 102, 255), rgb(238, 102, 229));
 }
