@@ -12,7 +12,7 @@
 /* Base Components */
 
 .page {
-	height: 100vh;
+	height: 100dvh;  /* https://stackoverflow.com/a/70048720/8314159 */
 }
 
 /* Entities */
@@ -23,8 +23,43 @@
 }
 
 .entity {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1%;
 	background-color: rgb(66, 66, 66);
+	border-radius: 5vmin;
 	font-size: max(3vw, 4vh);
+	text-wrap: nowrap;
+	margin: 0 5%;
+	padding: 1% 3%;
+}
+
+.entity span {
+	font-size: max(3vw, 2vh);
+	padding: 0.5% 2%;
+	border-radius: 10vmin;
+}
+
+.entity a {
+	color: rgba(255, 255, 255, 0.9);
+	font-size: max(4vw, 4vh);
+}
+
+.entity #founder {
+	background-image: linear-gradient(to right, #f2709c, #ff9472);
+}
+
+.entity #leader {
+	background-image: linear-gradient(to right, #9bfbc6, #99f6ff);
+}
+
+.entity #manager {
+	background-image: linear-gradient(to right, hsl(23, 100%, 71%), hsl(33, 100%, 56%));
+}
+
+.entity #strategist {
+	background-image: linear-gradient(to right, #81aef8, #c2e9fb);
 }
 
 /* Page 1 */
