@@ -26,7 +26,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 1%;
 	background-color: rgb(66, 66, 66);
 	border-radius: 5vmin;
 	font-size: max(3vw, 4vh);
@@ -36,14 +35,15 @@
 }
 
 .entity span {
-	font-size: max(3vw, 2vh);
+	font-size: clamp(3vw, 4vh, 5vw);
 	padding: 0.5% 2%;
+	margin: 0.5%;
 	border-radius: 10vmin;
 }
 
 .entity a {
 	color: rgba(255, 255, 255, 0.9);
-	font-size: max(4vw, 4vh);
+	font-size: clamp(4vw, 6.5vh, 10vw);
 }
 
 .entity #founder {
@@ -181,4 +181,10 @@
 	grid-template-rows: 1fr 3fr 3fr;
 	place-items: center;
 	background-image: linear-gradient(rgb(51, 102, 255), rgb(238, 102, 229));
+}
+
+/* Page 3 */
+
+#page3 {
+	background-image: linear-gradient(#db573d, #1f67cc);
 }
